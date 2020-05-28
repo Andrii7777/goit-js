@@ -1,45 +1,35 @@
 let delivery = prompt("Введите страну для доставки");
+let price1 = 100;
+let price2 = 250;
+let price3 = 170;
+let price4 = 80;
+let price5 = 120;
 
-const country1 = "китай";
-const country2 = "чили";
-const country3 = "австралия";
-const country4 = "индия";
-const country5 = "ямайка";
+if (delivery === null) {
+  console.log("Отменено пользователем!");
+} else {
+  switch ((delivery = delivery.toLowerCase())) {
+    case "китай":
+      console.log(`Доставка в ${delivery} будет стоить ${price1} кредитов`);
+      break;
 
-let price;
-let result;
+    case "чили":
+      console.log(`Доставка в ${delivery} будет стоить ${price2} кредитов`);
+      break;
 
-switch ((delivery = delivery.toLowerCase())) {
-  case "null":
-    result = "Отменено пользователем!";
-    break;
+    case "aвстралия":
+      console.log(`Доставка в ${delivery} будет стоить ${price3} кредитов`);
+      break;
 
-  case country1:
-    price = 100;
-    result = `Доставка в ${country1} будет стоить ${price} кредитов`;
-    break;
+    case "индия":
+      console.log(`Доставка в ${delivery} будет стоить ${price4} кредитов`);
+      break;
 
-  case country2:
-    price = 250;
-    result = `Доставка в ${country2} будет стоить ${price} кредитов`;
-    break;
+    case "ямайка":
+      console.log(`Доставка в ${delivery} будет стоить ${price5} кредитов`);
+      break;
 
-  case country3:
-    price = 170;
-    result = `Доставка в ${country3} будет стоить ${price} кредитов`;
-    break;
-
-  case country4:
-    price = 80;
-    result = `Доставка в ${country4} будет стоить ${price} кредитов`;
-    break;
-
-  case country5:
-    price = 120;
-    result = `Доставка в ${country5} будет стоить ${price} кредитов`;
-    break;
-
-  default:
-    alert("В вашей стране доставка не доступна");
+    default:
+      alert("В вашей стране доставка не доступна");
+  }
 }
-console.log(result);

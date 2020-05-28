@@ -1,14 +1,13 @@
 let total = 0;
-
+let input;
 do {
-  let input = prompt("Введите число.");
+  input = prompt("Введите число.");
 
-  if (input === null) {
-    break;
+  const isNumber = Number.isNaN(+input);
+  if (isNumber === true) {
+    continue;
   }
-
-  input = Number(input);
-  total += input;
-} while (true);
+  total += +input;
+} while (input !== null);
 
 console.log(`Общая сумма ${total}`);
